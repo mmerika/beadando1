@@ -81,3 +81,14 @@ def feladat_6(a, b, c):
 
 
 feladat_6(2, 5, 6)
+
+def feladat_7(a,b,dh):
+    K=2*(a+b)
+    if K==dh:
+        print("Pont elég a drótkerítés!")
+    elif K>dh:
+        print(K-dh,"méter drót kell még a kerítéshez")
+    else:
+        print(dh-K,"méterrel több drót marad a kerítés építés után")
+
+feladat_7(5,5,18)
