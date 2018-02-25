@@ -106,3 +106,38 @@ def feladat_13(erdemjegy):
         print("egyes")
 
 feladat_13(4)
+
+def feladat_14(hónap):
+    if hónap==1:
+        print("Január")
+    elif hónap==2:
+        print("Február")
+    elif hónap==3:
+        print("Március")
+    elif hónap == 4:
+        print("Április")
+    elif hónap == 5:
+        print("Május")
+    elif hónap == 6:
+        print("Június")
+    elif hónap == 7:
+        print("Július")
+    elif hónap==8:
+        print("Augusztus")
+    elif hónap==9:
+        print("Szeptember")
+    elif hónap==10:
+        print("Október")
+    elif hónap==11:
+        print("November")
+    elif hónap==12:
+        print("December")
+feladat_14(10)
+
+def feladat_12(elert,max):
+    szazalek=elert/max*100
+    if szazalek>=60:
+       print("Sikeres")
+    else:
+        print("Sikertelen")
+feladat_12(65,110)
