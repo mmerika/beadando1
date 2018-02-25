@@ -92,3 +92,17 @@ def feladat_7(a,b,dh):
         print(dh-K,"méterrel több drót marad a kerítés építés után")
 
 feladat_7(5,5,18)
+
+def feladat_13(erdemjegy):
+    if erdemjegy==5:
+        print("ötös")
+    elif erdemjegy==4:
+        print("négyes")
+    elif erdemjegy==3:
+        print("hármas")
+    elif erdemjegy==2:
+        print("kettes")
+    elif erdemjegy==1:
+        print("egyes")
+
+feladat_13(4)
