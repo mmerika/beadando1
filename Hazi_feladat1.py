@@ -7,7 +7,6 @@ def feladat_1(A,B):
 
 feladat_1(4,6)
 
-
 def feladat_2():
     a = int(input("Kérem az első számot!"))
     b = int(input("Kérem az második számot!"))
@@ -24,8 +23,8 @@ def feladat_2():
         print (c,b,a)
     else:
         print (c,a,b)
-feladat_2()
 
+feladat_2()
 
 def feladat_3(x):
 
@@ -40,7 +39,6 @@ def feladat_3(x):
 
 x = feladat_3(-10)
 print(x)
-
 
 def feladat_4(a,b,c):
     if a < b and a < c:
@@ -58,22 +56,19 @@ def feladat_4(a,b,c):
 
 feladat_4(5,7,-5)
 
-
 def feladat_5(a,b,c,d):
     if d>=0:
         print(a,c,b,d)
     else:
         print(a,b,d,c)
-feladat_5(2,4,1,3)
 
+feladat_5(2,4,1,3)
 
 def feladat_6(a, b, c):
     if a + b >= c and a + c >= b and b + c >= a:
         print("Van ilyen háromszög!")
-
     else:
         print("Nincs ilyen háromszög!")
-
 
 feladat_6(2, 5, 6)
 
@@ -147,3 +142,15 @@ def feladat_10(ev1,ev2):
     print(szokoevek)
 
 feladat_10(1990,2019)
+
+def feladat_15(a,b):
+    hanyados=0;
+    while a>=b:
+        hanyados=hanyados+1
+        a=a-b
+    return hanyados
+
+print (feladat_15(75,15))
+
+
+
