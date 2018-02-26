@@ -1,3 +1,5 @@
+import math
+
 def feladat_1(A,B):
     A=A-B
     B=B+A
@@ -161,4 +163,46 @@ def feladat_16(a,b):
     return b
 
 print(feladat_16(360,225))
+
+def feladat_17(a):
+    eredeti=a
+    b=0
+    while a>0:
+        m=a%10
+        b=b*10+m
+        a=a//10
+    return eredeti==b
+print("palindrom: ", feladat_17(101))
+
+def feladat_18(a,b):
+    x=a
+    y=b
+    p=0
+    while x>0:
+        if x%2==1:
+            p=p+y
+        x=x//2
+        y=y+y
+    return p
+print (feladat_18(45,17))
+
+import math
+
+def feladat_19(n):
+    valasz=True
+    for i in range (2,int(math.sqrt(n))):
+        if n%2==0:
+            valasz=False
+            break
+    return valasz
+print (feladat_19(10))
+
+def feladat_20(n):
+    a=1
+    b=0
+    for i in range (1,n+1):
+        print (b)
+        b=a+b
+        a=b-a
+feladat_20(10)
 
