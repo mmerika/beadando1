@@ -1,5 +1,3 @@
-#1.feladat
-
 def feladat_1(A,B):
     A=A-B
     B=B+A
@@ -9,7 +7,6 @@ def feladat_1(A,B):
 
 feladat_1(4,6)
 
-#2.feladat
 
 def feladat_2():
     a = int(input("Kérem az első számot!"))
@@ -29,7 +26,7 @@ def feladat_2():
         print (c,a,b)
 feladat_2()
 
-#3.feladat
+
 def feladat_3(x):
 
     if x>-2 and x<0:
@@ -44,7 +41,6 @@ def feladat_3(x):
 x = feladat_3(-10)
 print(x)
 
-#4.feladat
 
 def feladat_4(a,b,c):
     if a < b and a < c:
@@ -62,7 +58,7 @@ def feladat_4(a,b,c):
 
 feladat_4(5,7,-5)
 
-#5.feladat
+
 def feladat_5(a,b,c,d):
     if d>=0:
         print(a,c,b,d)
@@ -70,7 +66,6 @@ def feladat_5(a,b,c,d):
         print(a,b,d,c)
 feladat_5(2,4,1,3)
 
-#6.feladat
 
 def feladat_6(a, b, c):
     if a + b >= c and a + c >= b and b + c >= a:
@@ -141,3 +136,14 @@ def feladat_12(elert,max):
     else:
         print("Sikertelen")
 feladat_12(65,110)
+
+def feladat_10(ev1,ev2):
+    szokoevek=0;
+    for i in range(ev1,ev2+1):
+        if i%4==0 and i%100!=0:
+            szokoevek=szokoevek+1
+        if i%400==0:
+            szokoevek=szokoevek+1
+    print(szokoevek)
+
+feladat_10(1990,2019)
