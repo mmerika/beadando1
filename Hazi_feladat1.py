@@ -186,8 +186,6 @@ def feladat_18(a,b):
     return p
 print (feladat_18(45,17))
 
-import math
-
 def feladat_19(n):
     valasz=True
     for i in range (2,int(math.sqrt(n))):
