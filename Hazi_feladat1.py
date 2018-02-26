@@ -152,5 +152,13 @@ def feladat_15(a,b):
 
 print (feladat_15(75,15))
 
+def feladat_16(a,b):
+    r=a%b
+    while r!=0:
+        a=b
+        b=r
+        r=a%b
+    return b
 
+print(feladat_16(360,225))
 
