@@ -26,7 +26,6 @@ def feladat_2():
         print (c,a,b)
 
 def feladat_3(x):
-
     if x>-2 and x<0:
         return (2*x)
     elif x>=0 and x<2:
@@ -35,7 +34,6 @@ def feladat_3(x):
         return(10)
     else:
         return("erre nincs definiálva a függvény")
-
 x = feladat_3(-10)
 print(x)
 
@@ -160,7 +158,6 @@ def feladat_15(a,b):
         hanyados=hanyados+1
         a=a-b
     return hanyados
-
 print (feladat_15(75,15))
 
 def feladat_16(a,b):
@@ -170,7 +167,6 @@ def feladat_16(a,b):
         b=r
         r=a%b
     return b
-
 print(feladat_16(360,225))
 
 def feladat_17(a):
@@ -212,7 +208,6 @@ def feladat_20(n):
         b=a+b
         a=b-a
 feladat_20(10)
-
 
 def feladat_21(n):
     a = 0
@@ -274,3 +269,68 @@ def feladat_26():
     b = int(b)
     osszeg = a + b
     print(osszeg)
+
+def feladat_27():
+    poz=0
+    neg=0
+    elozo=0
+    a=float(input(""))
+    if a < 0:
+        neg = neg + 1
+    else:
+        poz = poz + 1
+    while True:
+        elozo=a
+        a=float(input(""))
+        if a<0:
+            neg=neg+1
+        else:
+            poz=poz+1
+    print(poz,neg)
+feladat_27()
+
+def feladat_28(n):
+    while n>0:
+        if math.sqrt(n)==round (math.sqrt(n)):
+            print(n)
+            break
+        n=n-1
+feladat_28(999)
+
+def feladat_29(n):
+    fakt=1
+    for i in range(1,n+1):
+        fakt=fakt*i
+    print(fakt)
+feladat_29(10)
+
+def feladat_30():
+    ev=int(input(""))
+    honap=int(input(""))
+    nap=int(input(""))
+    if honap==1:
+        print(nap)
+    elif honap==2:
+        print(nap+31)
+    elif honap==3:
+        print(nap+59)
+    elif honap==4:
+        print(nap+90)
+    elif honap==5:
+        print(nap+120)
+    elif honap==6:
+        print(nap+151)
+    elif honap==7:
+        print(nap+181)
+    elif honap==8:
+        print(nap+212)
+    elif honap==9:
+        print(nap+243)
+    elif honap==10:
+        print(nap+273)
+    elif honap==11:
+        print(nap+304)
+    else:
+        print(nap+334)
+feladat_30()
+
