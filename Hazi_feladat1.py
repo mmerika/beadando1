@@ -1,4 +1,5 @@
 import math
+import datetime
 
 def feladat_1(A,B):
     A=A-B
@@ -6,8 +7,6 @@ def feladat_1(A,B):
     A=B-A
     print(A)
     print(B)
-
-feladat_1(4,6)
 
 def feladat_2():
     a = int(input("Kérem az első számot!"))
@@ -25,8 +24,6 @@ def feladat_2():
         print (c,b,a)
     else:
         print (c,a,b)
-
-feladat_2()
 
 def feladat_3(x):
 
@@ -56,23 +53,20 @@ def feladat_4(a,b,c):
     elif abs(a) < abs(c) and abs(b) < abs(c):
         print(c)
 
-feladat_4(5,7,-5)
-
 def feladat_5(a,b,c,d):
     if d>=0:
         print(a,c,b,d)
     else:
         print(a,b,d,c)
 
-feladat_5(2,4,1,3)
-
 def feladat_6(a, b, c):
     if a + b >= c and a + c >= b and b + c >= a:
         print("Van ilyen háromszög!")
+        s = (a + b + c) / 2
+        r1 = math.sqrt(((s - a) * (s - b) * (s - c)) / s)
+        r2 = a * b * c / (4 * math.sqrt(((s - a) * (s - b) * (s - c)) / s))
     else:
-        print("Nincs ilyen háromszög!")
-
-feladat_6(2, 5, 6)
+        print("Nincs ilyen háromszög!")  # heron keplet
 
 def feladat_7(a,b,dh):
     K=2*(a+b)
@@ -83,7 +77,44 @@ def feladat_7(a,b,dh):
     else:
         print(dh-K,"méterrel több drót marad a kerítés építés után")
 
-feladat_7(5,5,18)
+def feladat_8(a,b,c,d):
+    if a+c>2*d and b>0:
+        x=d-3*b
+    elif a+c<2*d and b<0:
+        x=d+3*b
+    else:
+        x=4
+    if x<5:
+        print(3*x-5)
+    elif x>=5 and x<=10:
+        print (10)
+    elif x>10:
+        print( 9*x+1)
+
+def feladat_9():
+    print()
+
+def feladat_10(ev1,ev2):
+    szokoevek=0;
+    for i in range(ev1,ev2+1):
+        if i%4==0 and i%100!=0:
+            szokoevek=szokoevek+1
+        if i%400==0:
+            szokoevek=szokoevek+1
+    print(szokoevek)
+
+def feladat_11():
+    ma=datetime.date.today()
+    szulinap=datetime.date(1989,6,15)
+    kulombseg=ma-szulinap
+    print(kulombseg.days)
+
+def feladat_12(elert,max):
+    szazalek=elert/max*100
+    if szazalek>=60:
+       print("Sikeres")
+    else:
+        print("Sikertelen")
 
 def feladat_13(erdemjegy):
     if erdemjegy==5:
@@ -96,8 +127,6 @@ def feladat_13(erdemjegy):
         print("kettes")
     elif erdemjegy==1:
         print("egyes")
-
-feladat_13(4)
 
 def feladat_14(hónap):
     if hónap==1:
@@ -124,26 +153,6 @@ def feladat_14(hónap):
         print("November")
     elif hónap==12:
         print("December")
-feladat_14(10)
-
-def feladat_12(elert,max):
-    szazalek=elert/max*100
-    if szazalek>=60:
-       print("Sikeres")
-    else:
-        print("Sikertelen")
-feladat_12(65,110)
-
-def feladat_10(ev1,ev2):
-    szokoevek=0;
-    for i in range(ev1,ev2+1):
-        if i%4==0 and i%100!=0:
-            szokoevek=szokoevek+1
-        if i%400==0:
-            szokoevek=szokoevek+1
-    print(szokoevek)
-
-feladat_10(1990,2019)
 
 def feladat_15(a,b):
     hanyados=0;
@@ -212,10 +221,6 @@ def feladat_21(n):
         n = n // 10
     print(a)
 
-
-feladat_21(321)
-
-
 def feladat_22(x, n):
     eredmeny = 1
     while n > 0:
@@ -225,7 +230,6 @@ def feladat_22(x, n):
         x = x * x
         n = n // 2
     print(eredmeny)
-
 
 def feladat_23(n):
     x = 0
@@ -240,9 +244,6 @@ def feladat_23(n):
             print(y)
         y = y + 1
 
-
-feladat_23(3)
-
 def feladat_24():
     a=0
     b=0
@@ -254,7 +255,6 @@ def feladat_24():
             b=b+1
         x=int(input(""))
     print(a,b)
-feladat_24()
 
 def  feladat_25():
     fo=int(input(""))
@@ -266,7 +266,6 @@ def  feladat_25():
         print("Átlagos népsűrűsségű.")
     else:
        print("Sűrűn lakott.")
-feladat_25()
 
 def feladat_26():
     szoveg = input("")
