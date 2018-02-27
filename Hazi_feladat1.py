@@ -232,7 +232,7 @@ def feladat_23(n):
     y = 1
     while x < n:
         o = 0
-        for i in range(1, y // 2):
+        for i in range(1, y // 2 +1):
             if y % i == 0:
                 o = o + i
         if o == y:
@@ -243,3 +243,27 @@ def feladat_23(n):
 
 feladat_23(3)
 
+def feladat_24():
+    a=0
+    b=0
+    x=int(input(""))
+    while x!=0:
+        if x%7==5:
+            a=a+1
+        if x%13==7:
+            b=b+1
+        x=int(input(""))
+    print(a,b)
+feladat_24()
+
+def  feladat_25():
+    fo=int(input(""))
+    km=int (input(""))
+    s=fo/km
+    if s<=50:
+        print("Ritkán lakott.")
+    elif s>50 and s<=300:
+        print("Átlagos népsűrűsségű.")
+    else:
+       print("Sűrűn lakott.")
+feladat_25()
