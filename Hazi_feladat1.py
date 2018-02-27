@@ -204,3 +204,42 @@ def feladat_20(n):
         a=b-a
 feladat_20(10)
 
+
+def feladat_21(n):
+    a = 0
+    while n != 0:
+        a = a * 10 + n % 10
+        n = n // 10
+    print(a)
+
+
+feladat_21(321)
+
+
+def feladat_22(x, n):
+    eredmeny = 1
+    while n > 0:
+        if n % 2 == 1:
+            eredmeny = eredmeny * x
+            n = n - 1
+        x = x * x
+        n = n // 2
+    print(eredmeny)
+
+
+def feladat_23(n):
+    x = 0
+    y = 1
+    while x < n:
+        o = 0
+        for i in range(1, y // 2):
+            if y % i == 0:
+                o = o + i
+        if o == y:
+            x = x + 1
+            print(y)
+        y = y + 1
+
+
+feladat_23(3)
+
