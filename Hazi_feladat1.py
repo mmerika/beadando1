@@ -267,3 +267,11 @@ def  feladat_25():
     else:
        print("Sűrűn lakott.")
 feladat_25()
+
+def feladat_26():
+    szoveg = input("")
+    a, b = szoveg.split(" ")
+    a = int(a)
+    b = int(b)
+    osszeg = a + b
+    print(osszeg)
