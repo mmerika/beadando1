@@ -271,22 +271,26 @@ def feladat_26():
     print(osszeg)
 
 def feladat_27():
-    poz=0
-    neg=0
-    elozo=0
-    a=float(input(""))
+    poz = 0
+    neg = 0
+    elozo = 0
+    a = float(input(""))
     if a < 0:
         neg = neg + 1
     else:
         poz = poz + 1
     while True:
-        elozo=a
-        a=float(input(""))
-        if a<0:
-            neg=neg+1
+        elozo = a
+        a = float(input(""))
+        if a < 0:
+            neg = neg + 1
+            if elozo < 0:
+                break
         else:
-            poz=poz+1
-    print(poz,neg)
+            poz = poz + 1
+            if elozo >= 0:
+                break
+    print(poz, neg)
 feladat_27()
 
 def feladat_28(n):
@@ -353,3 +357,6 @@ def feladat_35(n):
             if prim1 and prim2:
                 print(x, (x+2))
                 i=i+1
+
+def main():
+    feladat_1()
