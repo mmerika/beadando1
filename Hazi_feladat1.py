@@ -334,3 +334,22 @@ def feladat_30():
         print(nap+334)
 feladat_30()
 
+def feladat_35(n):
+    i=0
+    x=1
+    while i<n:
+        x=x+1
+        prim1 = True
+        for j in range(2, x // 2):
+            if x % j == 0:
+                prim1 = False
+                break
+        if prim1:
+            prim2 = True
+            for k in range(2, (x+2) // 2):
+                if (x+2) % k == 0:
+                    prim2 = False
+                    break
+            if prim1 and prim2:
+                print(x, (x+2))
+                i=i+1
