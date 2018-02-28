@@ -445,25 +445,25 @@ def feladat_38():
     while x>0:
         a=x%10
         x=x//10
-        if a=0:
+        if a==0:
             nulla=nulla+1
-        if a=1:
+        if a==1:
             egy=egy+1
-        if a=2:
+        if a==2:
             ketto=ketto+1
-        if a=3:
+        if a==3:
             harom=harom+1
-        if a=4:
+        if a==4:
             negy=negy+1
-        if a=5:
+        if a==5:
             ot=ot+1
-        if a=6:
+        if a==6:
             hat=hat+1
-        if a=7:
+        if a==7:
             het=het+1
-        if a=8:
+        if a==8:
             nyolc=nyolc+1
-        if=9:
+        if a==9:
             kilenc=kilenc+1
     print(nulla, egy, ketto, harom, negy, ot,hat, het,nyolc, kilenc)
 
@@ -477,3 +477,46 @@ def feladat_39():
             osszeg=osszeg+m
         if kob==i:
             print(i)
+
+
+
+def main():
+    feladat_1(10, 10)
+    feladat_2()
+    feladat_3(20)
+    feladat_4(1, 2, 3)
+    feladat_5(1, 2, 3, 4)
+    feladat_6(1, 2, 3)
+    feladat_7()
+    feladat_8(1, 2, 3, 4)
+    feladat_9()
+    feladat_10(1990, 2018)
+    feladat_11()
+    feladat_12(70, 100)
+    feladat_13(3)
+    feladat_14(4)
+    feladat_15(1, 2)
+    feladat_16(1, 2)
+    feladat_17(10)
+    feladat_18(1, 2)
+    feladat_19(10)
+    feladat_20(10)
+    feladat_21(10)
+    feladat_22(10, 20)
+    feladat_23(10)
+    feladat_24()
+    feladat_25()
+    feladat_26()
+    feladat_27()
+    feladat_28(10)
+    feladat_29(10)
+    feladat_30()
+    feladat_31()
+    feladat_32(10, 20, 3)
+    feladat_33()
+    feladat_34()
+    feladat_35()
+    feladat_36(10)
+    feladat_37(10)
+    feladat_38()
+    feladat_39()
