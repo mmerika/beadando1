@@ -338,6 +338,53 @@ def feladat_30():
         print(nap+334)
 feladat_30()
 
+def feladat_31(n):
+    for i in range (1,n//2 + 1):
+        if n%i==0:
+            print(i)
+    print(n)
+feladat_31(100)
+
+def feladat_32(n1,n2,k):
+    for i in range(n1,n2+1):
+        if i%k==0:
+            print(i)
+feladat_32(1,10,2)
+
+def feladat_33():
+    n=int(input(""))
+    maxoszto=1
+    x=1
+    for i in range(1,n+1):
+        aktoszto=0
+        for j in range(1,i+1):
+            if i%j==0:
+                aktoszto=aktoszto+1
+        if aktoszto>maxoszto:
+            aktoszto=maxoszto
+            x=i
+    print(x)
+feladat_33()
+#nem fut le
+
+def feladat_34(n):
+    for i in range(1,n//2+1):
+        prim1=True
+        for j in range(2,i//2+1):
+            if i%j==0:
+                prim1=False
+                break
+        if prim1:
+            prim2=True
+            for k in range(2,(n-i)//2+1):
+                if (n-i)%k==0:
+                    prim2=False
+                    break
+            if prim1 and prim2:
+                print(i,(n-i))
+                break
+feladat_34(10)
+
 def feladat_35(n):
     i=0
     x=1
