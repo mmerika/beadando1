@@ -407,3 +407,73 @@ def feladat_35(n):
 
 def main():
     feladat_1()
+
+def feladat_36(n):
+    a=1
+    b=0
+    for i in range (1,n+1):
+        print (b)
+        b=a+b
+        a=b-a
+        if b>n:
+            break
+feladat_36(100)
+
+def feladat_37(n):
+    a=1
+    b=0
+    for i in range (1,n+1):
+        b=a+b
+        a=b-a
+        if b>n:
+            print(b)
+            break
+feladat_37(120)
+
+def feladat_38():
+    x=int(input(""))
+    nulla=0
+    egy=0
+    ketto=0
+    harom=0
+    negy=0
+    ot=0
+    hat=0
+    het=0
+    nyolc=0
+    kilenc=0
+    while x>0:
+        a=x%10
+        x=x//10
+        if a=0:
+            nulla=nulla+1
+        if a=1:
+            egy=egy+1
+        if a=2:
+            ketto=ketto+1
+        if a=3:
+            harom=harom+1
+        if a=4:
+            negy=negy+1
+        if a=5:
+            ot=ot+1
+        if a=6:
+            hat=hat+1
+        if a=7:
+            het=het+1
+        if a=8:
+            nyolc=nyolc+1
+        if=9:
+            kilenc=kilenc+1
+    print(nulla, egy, ketto, harom, negy, ot,hat, het,nyolc, kilenc)
+
+def feladat_39():
+    for i in range(1,1001):
+        kob=i**3
+        osszeg=0
+        while kob>0:
+            m=kob%10
+            kob=kob//10
+            osszeg=osszeg+m
+        if kob==i:
+            print(i)
