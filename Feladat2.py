@@ -67,6 +67,16 @@ def feladat_5(n):
 
 feladat_5(100)
 
+def feladat_6_szamjegy(a):
+    tömb=[]
+    while a>0:
+        tömb.append(a%10)
+        a=a//10
+    return tömb
+print(feladat_6_szamjegy(123))
+
+def feladat_6(szamjegy1,szamjegy2):
+    szamjegy1tömb=feladat_6_szamjegy(a)
 
 
 
