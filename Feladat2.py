@@ -115,3 +115,20 @@ def feladat_9():
     return i
 feladat_9()
 
+def feladat_10():
+    try:
+        sorhossz=0
+        file=open("be.txt","r")
+        for line in file:
+            if line[0].isupper():
+                if sorhossz<len(line):
+                    sorhossz=len(line)
+        return sorhossz
+    except Error:
+        print("Nem sikerült olvasni a fájlt!")
+        return 0
+    finally:
+        file.close()
+
+print(feladat_10())
+
