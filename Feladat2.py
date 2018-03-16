@@ -78,5 +78,40 @@ print(feladat_6_szamjegy(123))
 def feladat_6(szamjegy1,szamjegy2):
     szamjegy1tömb=feladat_6_szamjegy(a)
 
+def feladat_6_szamjegy(a):
+    tömb=[]
+    while a>0:
+        tömb.append(a%10)
+        a=a//10
+    return tömb
+print(feladat_6_szamjegy(123))
 
+def feladat_7(a,b):
+    tömba=feladat_6_szamjegy(a)
+    tömbb=feladat_6_szamjegy(b)
+    for i in range(0,len(tömba)):
+        for j in range(0,len(tömbb)):
+            if tömba[i]==tömbb[j]:
+                return True
+    return False
+print(feladat_7(123,653))
+
+def feladat_8(n):
+    i=0
+    osszeg=0
+    while osszeg<n:
+        i=i+1
+        osszeg=osszeg+i
+    return i
+
+print(feladat_8(1000))
+
+def feladat_9():
+    magassag=1
+    i=1
+    while magassag<300:
+        i=i+1
+        magassag=magassag+magassag*(1/i)
+    return i
+feladat_9()
 
