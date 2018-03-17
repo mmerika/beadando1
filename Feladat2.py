@@ -132,3 +132,47 @@ def feladat_10():
 
 print(feladat_10())
 
+def feladat_11():
+    try:
+        sorhossz = 0
+        file = open("be.txt", "r")
+        for line in file:
+            line = line.rstrip()
+            if line[len(line)-1]=="." or line[len(line)-1]=="?" or line[len(line)-1]=="!" :
+                if sorhossz > len(line) or sorhossz==0:
+                    sorhossz = len(line)
+        return sorhossz
+    except Error:
+        print("Nem sikerült olvasni a fájlt!")
+        return 0
+    finally:
+        file.close()
+
+print(feladat_11())
+
+def feladat_17():
+    try:
+        file = open("be.txt", mode="r")
+        fileki=open("ki.txt", mode="w+")
+        megvan=False
+        for line in file:
+            fileki.write(line)
+            line = line.rstrip()
+            szavak=line.split(" ")
+            for i in range(0, len(szavak)):
+                if szavak[i]==szavak[i].lower():
+                    fileki.write(line)
+                    megvan=True
+                    break
+            if megvan:
+                break
+    except Error:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+
+
+
+
