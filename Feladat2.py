@@ -146,6 +146,85 @@ def feladat_11():
 
 print(feladat_11())
 
+def feladat_12():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        fileki= open("ki.txt", mode="w+")
+        max=0
+        akt=0
+        elozo=0
+        for line in file:
+            line = line.rstrip()
+            if akt==0:
+                elozo=int(line)
+                akt=akt+1
+            else:
+                if int(line)==elozo:
+                    akt=akt+1
+                else:
+                    if akt>max:
+                        max=akt
+                    akt=1
+                    elozo=int(line)
+        if akt>max:
+            max=akt
+        if max>=elozo:
+            fileki.write("IGEN")
+        else:
+            fileki.write("NEM")
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+feladat_12()
+
+
+def feladat_13():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        elozo=0
+        db=0
+        tomb=[]
+        for line in file:
+            line = line.rstrip()
+            if elozo!=0:
+                tomb.append(abs(elozo-int(line)))
+            elozo=int(line)
+        for i in range(0, len(tomb)):
+            if elozo>=tomb[i]:
+                db=db+1
+        print (db)
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+
+feladat_13()
+
+
+def feladat_14():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        fileki = open("ki.txt", mode="w+")
+        for line in file:
+            line = line.rstrip()
+            leghosszabb = 0
+            for i in range(0, len(line) // 2):
+                if line[i] == line[len(line) - 1 - i]:
+                    leghosszabb = leghosszabb + 1
+                else:
+                    break
+            fileki.write(str(leghosszabb) + "\n")
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+feladat_14()
+
 def feladat_15():
     try:
         file = open("be.txt", mode="r", encoding="UTF-8")
