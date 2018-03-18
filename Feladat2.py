@@ -8,8 +8,6 @@ def feladat_1(a):
     else:
         return False
 
-
-
 def feladat_2(n):
     szamok=2
     darab=0
@@ -25,9 +23,7 @@ def feladat_2(n):
             return szamok
         szamok=szamok+1
 
-
 print(feladat_2(5))
-
 
 def feladat_3(n):
     hatvany=1
@@ -150,6 +146,40 @@ def feladat_11():
 
 print(feladat_11())
 
+def feladat_15():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        fileki = open("ki.txt", mode="w+")
+        for line in file:
+            line = line.rstrip()
+            if line.strip()=="":
+                break
+            fileki.write(line+"\n")
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+feladat_15()
+
+def feladat_16():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        fileki = open("ki.txt", mode="w+")
+        for line in file:
+            line = line.rstrip()
+            if line==line.upper():
+                fileki.write(line+"\n")
+                break
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+feladat_16()
+
 def feladat_17():
     try:
         file = open("be.txt", mode="r")
@@ -171,6 +201,25 @@ def feladat_17():
     finally:
         file.close()
         fileki.close()
+
+def feladat_18():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+
+        for line in file:
+            line = line.rstrip()
+            adatok=line.split(" ")
+            eredmenyek=adatok[3].split(":")
+            if int(eredmenyek[1])>int(eredmenyek[0]):
+                print(adatok[2])
+            else:
+                print(adatok[0])
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+
+feladat_18()
 
 def feladat_19():
     try:
