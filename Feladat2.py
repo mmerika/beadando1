@@ -120,7 +120,7 @@ def feladat_10():
                 if sorhossz<len(line):
                     sorhossz=len(line)
         return sorhossz
-    except Error:
+    except IOError:
         print("Nem sikerült olvasni a fájlt!")
         return 0
     finally:
@@ -180,7 +180,6 @@ def feladat_12():
 
 feladat_12()
 
-
 def feladat_13():
     try:
         file = open("be.txt", mode="r", encoding="UTF-8")
@@ -202,7 +201,6 @@ def feladat_13():
         file.close()
 
 feladat_13()
-
 
 def feladat_14():
     try:
@@ -284,7 +282,6 @@ def feladat_17():
 def feladat_18():
     try:
         file = open("be.txt", mode="r", encoding="UTF-8")
-
         for line in file:
             line = line.rstrip()
             adatok=line.split(" ")
@@ -460,7 +457,6 @@ def feladat_26():
         for line in file2:
             db2=db2+2
         fileki.write(db1+" "+db2)
-
     except IOError:
         print("Nem sikerült olvasni a fájlt!")
     finally:
@@ -485,7 +481,6 @@ def feladat_27():
                 legkevesebb = len(szerzok)
                 nev = adat[0]
         fileki.write(nev)
-
     except IOError:
         print("Nem sikerült olvasni a fájlt!")
     finally:
