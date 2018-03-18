@@ -142,7 +142,7 @@ def feladat_11():
                 if sorhossz > len(line) or sorhossz==0:
                     sorhossz = len(line)
         return sorhossz
-    except Error:
+    except IOError:
         print("Nem sikerült olvasni a fájlt!")
         return 0
     finally:
@@ -166,12 +166,108 @@ def feladat_17():
                     break
             if megvan:
                 break
-    except Error:
+    except IOError:
         print("Nem sikerült olvasni a fájlt!")
     finally:
         file.close()
         fileki.close()
 
+def feladat_19():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        legtobben = 0
+        weboldal = ""
+        for line in file:
+            line = line.rstrip()
+            adat=line.split(" ")
+            if int(adat[1]) > legtobben:
+                legtobben = int(adat[1])
+                weboldal = adat[0]
+        print(weboldal)
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+
+feladat_19()
+
+def feladat_20():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        legtobben = 0
+        varosnev = ""
+        for line in file:
+            line = line.rstrip()
+            adat=line.split(";")
+            if int(adat[2]) > legtobben:
+                legtobben = int(adat[2])
+                varosnev = adat[0]
+        print(varosnev)
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+
+feladat_20()
+
+def feladat_21():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        fileki = open("ki.txt", mode="w+")
+        for line in file:
+            line = line.rstrip()
+            adat=line.split(";")
+            osszpont=0
+            for i in range(1, len(adat)):
+                osszpont=osszpont+int(adat[i])
+            fileki.write(adat[0] + " " + str(osszpont) + "\n")
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+feladat_21()
+
+def feladat_22():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        fileki = open("ki.txt", mode="w+")
+        ido=0.0
+        nev=""
+        for line in file:
+            line = line.rstrip()
+            adat=line.split(";")
+            if ido==0.0 or ido>float(adat[2]):
+                ido=float(adat[2])
+                nev=adat[0]
+        fileki.write(nev + "\n")
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+feladat_22()
+
+def feladat_23():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        elozotavolsag=0
+        for line in file:
+            line = line.rstrip()
+            if elozotavolsag>int(line):
+                print("NO")
+                return
+            else:
+                elozotavolsag=int(line)
+        print ("YES")
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+
+feladat_23()
 
 
 
