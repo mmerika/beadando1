@@ -397,6 +397,99 @@ def feladat_23():
 
 feladat_23()
 
+def feladat_24():
+    try:
+        file = open("be.txt", mode="r", encoding="UTF-8")
+        n = int(file.readline())
+        teknoc = file.readline().split(" ")
+        csiga = file.readline().split(" ")
+        teknocut = 0
+        csigaut = 0
+        for i in range(0, n):
+            teknocut = teknocut + int(teknoc[i])
+            csigaut = csigaut + int(csiga[i])
+        if csigaut > teknocut:
+            print(csigaut * 2)
+            print("SNAIL ")
+        elif teknocut > csigaut:
+            print(teknocut * 2)
+            print("TURTLE")
+        else:
+            print(csigaut * 2)
+            print("DRAW")
 
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
 
+feladat_24()
 
+def feladat_25():
+    try:
+        file = open("szotar.txt", mode="r", encoding="UTF-8")
+        n = int(file.readline())
+        angolszavak = []
+        magyarszavak = []
+        for i in range(0, n):
+            line = file.readline().rstrip()
+            szavak = line.split(":")
+            angolszavak.append(szavak[0])
+            magyarszavak.append(szavak[1])
+        print(len(angolszavak))
+        print(len(magyarszavak))
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+
+feladat_25()
+
+def feladat_26():
+    try:
+        a = input("fáljnév1")
+        b = input("fáljnév2")
+        file = open(a, mode="r", encoding="UTF-8")
+        file2 = open(b, mode="r", encoding="UTF-8")
+        fileki = open("ki.txt", mode="w+", encoding="UTF-8")
+        db1 = 0
+        db2 = 0
+        for line in file:
+            line = line.rstrip()
+            db1=db1+1
+        for line in file2:
+            db2=db2+2
+        fileki.write(db1+" "+db2)
+
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        file2.close()
+        fileki.close()
+
+feladat_26()
+
+def feladat_27():
+    try:
+        a = input("fáljnév1")
+        file = open(a, mode="r", encoding="UTF-8")
+        fileki = open("ki.txt", mode="w+", encoding="UTF-8")
+        legkevesebb = 500
+        nev = ""
+        for line in file:
+            line = line.rstrip()
+            adat = line.split(":")
+            szerzok = adat[1].split(",")
+            if len(szerzok) < legkevesebb:
+                legkevesebb = len(szerzok)
+                nev = adat[0]
+        fileki.write(nev)
+
+    except IOError:
+        print("Nem sikerült olvasni a fájlt!")
+    finally:
+        file.close()
+        fileki.close()
+
+feladat_27()
